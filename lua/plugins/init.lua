@@ -13,6 +13,23 @@ return {
     end,
   },
 
+  -- Линтинг
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      require("configs.lint")
+    end,
+  },
+
+  -- Форматирование
+  {
+    "stevearc/conform.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("configs.conform")
+    end,
+  }
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
